@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: emarionredotestproj 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: emarionredotestproj 
+    spec:
+      containers:
+        - name: emarionredotestproj 
+          image: rcontainer2.azurecr.io/emarionredotestproj
+          ports:
+          - containerPort: 80
